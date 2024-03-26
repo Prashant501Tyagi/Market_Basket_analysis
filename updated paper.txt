@@ -1,0 +1,124 @@
+
+
+
+
+
+
+Enhancing Predictive Maintenance: Integrating XGBoost and LSTM Models with Autoencoder for Improved Machine Health Monitoring
+
+
+
+
+
+The future of the automobile industry revolves around three basic factors: increased reliability, lower costs, and more effective operation as well as upkeep. Many manufacturers have recently placed a strong emphasis on predictive maintenance since it enables the early detection of equipment problems before they become serious. This implies increased difficulties in the car manufacturing process and, consequently, increased maintenance requirements. Artificial intelligence and machine learning applications enable the development and modernization of current maintenance techniques in the manufacturing of battery-powered car engines with condition surveillance, troubleshooting, and anticipatory maintenance; timely identification may prevent a great deal of time and money. These advances in technology and their impact in the manufacturing sector by way of the Revolution of 4.0, or Industry 4.0, for short, are interesting.This study proposes two methods that use two deep learning models for anomaly detection to enable predictive maintenance. In the first, different failure kinds are classified using an XGBOOST; in the second, different defects are classified using a Recurrent Long Short-Term Memory neural network (LSTM) with Autoencoder. While the LSTM model adjusted better at identifying high temperatures on generator bearings—a failure that occurred frequently throughout the study—it was discovered that the original model could generalize various types of failures. Look away
+
+The future of Car Manufacturing has as key elements, optimization in operation and maintenance, cost reduction, and increase of reliability. Predictive maintenance has become an important area of focus for many manufacturers in recent years, as it allows for the proactive identification of equipment issues before they become critical This means greater challenges in the operation of Car Manufacturing and, therefore, greater demands in maintenance. With technology advances and its role in the industrial sector through the-revolution 4.0 or Industry 4.0, artificial intelligence and machine learning applications enable the development and modernization of current maintenance techniques in electric car engine manufacturing, through condition monitoring, fault diagnosis, and predictive maintenance, thus, early detection can save a lot of time and money. In this study, two techniques are proposed to enable predictive maintenance, using two deep learning models for anomaly detection. The first one consists of an XGBOOST to classify various types of failures, for the second one a Recurrent Long Short-Term Memory neural network (LSTM) with Autoencoder is used to classify various flaws. With the first model, it was found that it is possible to generalize several types of failures, while the LSTM model adjust better on detecting high temperatures on generator bearings since was a failure that occurred frequently during the study. View less
+
+
+introduction
+Breakdown is a functional deterioration of a machine or equipment. This unpredictable functional deterioration leads to increase in the production cost, delayed delivery time and reduced profit of an industry. Though a strict adherence of maintenance related checklists were implemented in industry 3.0, it is very difficult to achieve zero downtime as some of the critical parameters related to breakdown are not monitored accurately and hence control actions are not taken effectively. Though there are a number of performance metrics for Total Productive Maintenance, as per many industries policy, Key Performance Indicators (KPIs) are selected. The most important KPIs are Mean Time between Failures (MTBF), Mean Time to Repair (MTTR), and Overall Equipment Effectiveness (OEE). Recently, some machine learning approaches have been reported in literatures for predictive maintenance problem. As discussed in (Traini et al., 2019), time based predictive maintenance approaches using sensors and machine learning model is more accurate for prediction in order to minimise the effect of disastrous failures in maintenance problem. Bohdan et al (Bohdan, 2019) mentioned that ARIMA for prediction model is closer to results of neural networks which has added advantage of less memory space and computational time. Liu et al (Liu et al., 2019) proposed Support Vector Machine for condition based monitoring using historical data to predict remaining useful life. In this paper, the past historical data is also considered for prediction model along with current status of the machine. Long Short Term Memory is discussed in (Zhou et al., 2019) to predict the fault based on non linear time series dataset. Though Extreme Learning Machine ELM-based regression may predict better, but its densed network utilize more memory and also have computing limitations as in (Da Silva et al., 2020). Support Vector Machine SVM is not effective in unbalanced data set as stated in (Zhao et al., 2019). Classification and regression are the two methods used for prediction where as multi-class classification leads to large size, ambiguity and uncertainty as in (Luo et al., January 2021). Data driven methods can perform better than model-based method in health monitoring (Li and Zhao, 2020). Yue Li et al (Li et al., 2020) says that for machine fault diagnosis minimum human intervension data driven deep learning is apt for optimum result.
+
+The motivation of this work is that the development of industry 4.0 is time consuming and highly expensive in terms of equipment and infrastructural changes. Hence in the proposed data driven regression system, transformation from industry 3.0 to industry 4.0 is achieved with minimum structural changes which leads to less cost and time. The inaccurate prediction may result in unnecessary maintenance, such as early replacement of components or increased production downtime because of unexpected machine failures. Hence, prediction accuracy is very important in TPM approach for identifying remaining useful life (RUL) in maintenance operations.
+
+https://www.researchsquare.com/article/rs-2895149/v1
+
+The term “Lean” refers to the efficient usage of the resources available by cutting down the non-value-added activities or wastes [1]. Lean manufacturing includes synergistic tools that integrate to build a high-quality and streamlined system and produce finished products based on the customer’s demand. According to [2], Lean manufacturing is a multi-facet production technique consisting of several industrial practices to identify customer value-adding processes and allow the processes to flow at the customer’s pull throughout the organization. In technological terms, Lean production is considered a complement to the automation technique [3]. 
+
+In the past few decades, various industrial sectors have widely adopted the concept of Lean. Initially, it was started as the Toyota production system, describing the company's manufacturing philosophy [4]. Different researchers have identified enormous benefits of Lean methodology in the service industries, like hospitals, food, education, public sector, airlines, retail banking, etc. For instance, according to [5], hospitals achieved high-quality healthcare results in the healthcare sector, like a significant reduction in 30-day mortality rates. Womack and Jones [6] clearly stated that implementing the core values of Toyota’s manufacturing system in various sectors has proved beneficial by considering Lean thinking, which refers to the thinking process of Lean within a company and its supply chain.
+
+Moreover, it was suggested that complex production systems must have Lean practices to smooth the operations and processes of a company [7]. In general, Lean manufacturing considers waste as any activity that does not add value to the customer. It can be any service, product, action, or process which needs talent, money, time, or investment. It can also include underutilized resources, idle time, additional inventory, inefficient processes, and untapped talent potential. 
+
+Mainly, Lean manufacturing aims to minimize waste by efficient use of resources. A waste in Lean manufacturing refers to an activity that adds cost to the service or product without adding value to the customer. According to [8], waste can be classified into three main types: obvious waste, less obvious waste, and invisible (unobvious) waste. The obvious waste may include excessive setup times, rework, additional procedures, unnecessary inventory, etc. In contrast, less obvious waste is incurred for several reasons, such as demand, staffing, yield, delivery times, and so on [9]. Finally, invisible waste is the waste that can not be seen but causes high costs (for example, material that can not be recycled and ends up in a landfill or incinerators) [10, 11]. No doubt, waste elimination through Lean manufacturing enables new opportunities to build and retain much more value for the end customer, considering the core competencies and resources of the business [12]. In other words, Lean manufacturing focuses on providing a sustainable business environment in which a company operates to run smoothly and efficiently. 
+
+According to the Lean philosophy, seven non-value-adding activities or wastes are found in manufacturing, including defective parts or products, unnecessary processing, inventory, waiting, motion, transportation, and over-production. Later, it was suggested that the services or products that do not meet customer expectations must be considered a waste [13]. Overproduction waste generally refers to manufacturing products or rendering services without any order requirement. The waste in overproduction can increase other forms of waste; it can contribute to a more significant amount of finished accumulated inventory, additional employees will be needed, and more storage facilities and warehouse operations will be required. Inventory waste is directly related to production, which comprises supplementary raw material, work-in-progress, and finished goods inventory.
+
+On the other hand, excess inventory may reflect problems within the manufacturing system, including defective machines, long setup times, and frequent machine breakdowns. Motion waste is the unnecessary movement of materials, employees, or machinery. Waste in motion can extend production time, create an unsafe workplace environment, and many other problems. Then, the waiting waste, such as the tasks or goods that do not move, or the finished products kept at the storage facilities for a long time to get delivered. Another waste is over-processing which typically takes place because of overdoing unnecessary work that does not add additional value to the business.
+
+https://www.mdpi.com/2071-1050/12/19/8211
+
+@article{Calabrese2020SOPHIAAE,
+  title={SOPHIA: An Event-Based IoT and Machine Learning Architecture for Predictive Maintenance in Industry 4.0},
+  author={Matteo Calabrese and Martin Cimmino and Francesca Fiume and Martina Manfrin and L. Romeo and Silvia Ceccacci and Marina Paolanti and Giuseppe Toscano and Giovanni Ciandrini and Alberto Carrotta and Maura Mengoni and E. Frontoni and Dimos Kapetis},
+  journal={Inf.},
+  year={2020},
+  volume={11},
+  pages={202},
+  url={https://api.semanticscholar.org/CorpusID:216355433}
+}
+Hydrolic_air_pressure,
+coolant_pressure,
+air_system_pressure,
+coolant_temperature ,
+hydraulic_oil_temperature,
+spindle_bearing_temperature,
+spindle_vibration,
+tool_vibration,
+spindle_speed,
+voltage,
+torque,
+cutting,
+downtime
+
+The dataset provides a detailed snapshot of the operational conditions during the production of car engines and is made up of an extensive set of features that were extracted from the manufacturing environment. The features cover a wide range of elements that are essential for keeping an eye on and preserving the machinery's health. Insights into the hydraulic and cooling systems are provided by hydraulic air pressure, coolant pressure, and air system pressure, guaranteeing optimal performance. The thermal measurements provided by hydraulic_oil_temperature and coolant_temperature are crucial in guiding the evaluation of performance that is dependent on temperature. Tool vibration provides information on the circumstances influencing the performance of the tool, while spindle bearing temperature and vibration help to monitor the essential parts of the spindle assembly. The optimization of production efficiency is made possible by the thorough overview of the machining processes provided by spindle speed, voltage, torque, and cutting parameters. One important factor in predictive maintenance strategies is the ability to identify times when the machine is not operating, which is made easier by including downtime as a feature. This extensive feature set serves as the basis for the creation of reliable predictive maintenance in addition to capturing the complexities of the manufacturing environment.
+
+
+2.	Machine Downtime Reduction:   
+•	Business Problem: Addressed unplanned machine downtime in pump manufacturing, leading  to productivity loss.   
+•	Objective: Decrease machine downtime.   
+•	Economic Success Criteria: Achieved cost savings of $1 million.   
+•	Technology Used: Machine Learning, PostgreSQL, Data Science.   
+   
+3.	Advanced House Prediction (Kaggle Challenge):   
+•	Technology Used: Machine Learning, Neural Networks.   
+•	Algorithms Used: XGBoost, Decision Tree Classifier, Gradient Boosting.   
+   
+4.	Criminal Identification using Siamese Neural Network :   
+•	Technology Used: Deep Learning, Machine Learning.   • Algorithm Used: CNN, Generative Adversial Network  
+  
+5.	Project: Customer Churn Prediction with Random Forest   
+6.	Created the dashboard on Sustainable development using power bi: 
+     
+Seminars and Workshops Attended:   
+   
+•	Cloud Computing Workshops by Amit Ashokan   
+•	Ethics of Artificial Intelligence Seminar by Monika Srinivasan   
+•	Demerits of Generative AI Seminar by Srinivan Sai Kishor, Applied Scientist at Amazon   
+
+Hands-on Experience with Azure Services: Proficient in using Azure services, including Data Factory, Databricks, and Synapse Analytics.
+Data Modeling and Best Practices: Implemented data modeling principles and adhered to best practices for effective data engineering.
+\Comprehensive Data Engineering Understanding: Acquired knowledge of data quality, monitoring, and maintenance best practices, ensuring project longevity and reliability.
+Designed and developed an end-to-end data pipeline using Azure Data Factory.
+
+Data Analysis Using Azure Synapse Analytics: Leveraged Azure Synapse Analytics for in-depth data analysis, extracting valuable insights crucial for informed decision-making.
+Quality Education
+
+
+Global Educational Insights: In-depth understanding of international education trends and insights, gained through continuous research, networking, and collaboration with educators worldwide.
+
+Dear Professor,
+
+I hope this email finds you well. My name is Prashant, and I am currently an MSC in Data Science Course from Christ University, Lavasa. I am writing to express my sincere interest in the upcoming internship opportunity that you mentioned by Lija mam.
+
+ I am particularly excited about the prospect of applying the theoretical knowledge and skills I have acquired in a real-world setting. The internship aligns perfectly with my academic interests and career aspirations, and I am eager to contribute to and learn from the practical experiences it offers.
+
+I believe that my coursework, coupled with my extracurricular activities, has equipped me with a strong foundation in [Data Science and Machine Learning]. I am confident that these skills, combined with my passion for working on Data will make me a valuable asset to the internship program.
+
+Moreover, I am drawn to this internship opportunity because CDAC provides a great platform for harnessing my career, or the chance to work with like-minded people. I am particularly intrigued by working in quantum computing and am eager to delve deeper into this Data Science.
+
+I have attached my resume to provide a comprehensive overview of my academic and extracurricular achievements. I would be grateful for the opportunity to discuss how my skills and experiences align with the internship during a brief meeting. I am available at your convenience and am willing to adapt to your schedule.
+
+Thank you very much for considering my application. I look forward to the possibility of contributing to and learning from this internship opportunity.
+
+Best regards,
+
+Prashant
+
+MSC-DS 
+
+Christ University, Lavasa campus
+
+Curriculum Development: Proficient in designing and implementing curriculum frameworks that align with global educational standards, fostering a holistic learning experience.
+
+Technology Integration: Experienced in leveraging cutting-edge educational technologies to enhance teaching methodologies, improve student engagement, and ensure a forward-looking educational approach.
+
+Cross-Cultural Collaboration: Effective communicator and collaborator across diverse cultural and educational settings, promoting inclusivity and diversity in educational practices.

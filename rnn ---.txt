@@ -1,0 +1,23 @@
+rnn ---
+-------
+
+comaparision between gru and lstm , b ilstm 
+explanation of diffrent gates are there those architecture 
+working prinicple, 
+and diagram ,
+ unit architecture diffrence between them 
+advantages and disadvanges// challenges
+Applications
+
+Restricketd Boltzmann Machine
+autoendocers
+generative ai
+transformer
+generative adversial networks
+
+
+basic achtecture 
+basic explanations
+working principles
+appliations
+advanteages / disadvantages
