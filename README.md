@@ -18,3 +18,5 @@ Understanding Market Basket Analysis with Example
 Market Basket Analysis is a type of frequent itemset mining technique that analyzes customer buying habits and deduces association rules among items purchased by customers.
 
 For example, suppose you are the sales manager of a retail store, and you are looking for the answer to the question, “Which itemset are customers likely to buy on their visit to the store?”.The correct answer lies in analyzing customer buying habits using Market Basket Analysis. MBA makes it easy for retailers to understand what sets of items are frequently purchased together and assists them in arranging those items on their shelves to achieve higher sales than usual.
+
+![Alt text](https://github.com/Prashant501Tyagi/Market_Basket_analysis/blob/main/Screenshot%202024-04-07%20131001%20-%20Copy.png)
