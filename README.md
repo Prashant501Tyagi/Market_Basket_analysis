@@ -2,6 +2,8 @@ Project Description
 
 Imagine that you are a restaurant sales manager, and a customer has asked you to recommend a few dishes from the menu. What do you do in such a scenario? Simple! You use the market basket analysis technique to deduce the recommendations so that customers are more likely to buy your recommended dish. This project will help you understand market basket analysis (MBA) with examples, its advantages, and the different types of MBA. In the end, you will find a brief overview of the MBA project solution.
 
+![Alt text](https://github.com/Prashant501Tyagi/Market_Basket_analysis/blob/main/Screenshot%202024-04-07%20130941%20-%20Copy.png)
+
 Introduction to Market Basket Analysis in Data Mining
 There are a few market basket analysis terms you need to understand before you can start working on the project. 
 
