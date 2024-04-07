@@ -40,4 +40,4 @@ Predictive Market Basket Analysis: This type of analysis includes the implementa
 
 Differential Market Basket Analysis: This type of analysis is advantageous for competitor analysis. It draws comparisons of purchase history between stores, seasons, two time periods, different days of the week, etc., to find interesting patterns in consumer behavior. For example, analyzing the sale of the same product on two different websites like, Amazon and Flipkart. One is preferred more than the other because of fast delivery or better user experience.
 
-@[Alt text](https://github.com/Prashant501Tyagi/Market_Basket_analysis/blob/main/Screenshot%202024-04-07%20131012.png)
+![Alt text](https://github.com/Prashant501Tyagi/Market_Basket_analysis/blob/main/Screenshot%202024-04-07%20131012.png)
